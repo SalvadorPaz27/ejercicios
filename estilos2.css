@@ -1,0 +1,318 @@
+/* ===================================================
+   Reset, modelo de cajas y estilos base
+   =================================================== */
+
+/* Reinicio de márgenes y paddings para que el contenido ocupe todo el ancho */
+html,
+body {
+    margin: 0;
+    /* Quita el margen predeterminado del navegador */
+    padding: 0;
+    /* Quita el relleno interno predeterminado */
+    font-family: Arial, sans-serif;
+    /* Tipografía solicitada con fuente genérica de respaldo */
+    background-color: #f7f3e9;
+    /* Color de fondo crema de la página */
+}
+
+/* Regla universal para el modelo de cajas */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* Incluye padding y border dentro del ancho (width) total */
+}
+
+/* ===================================================
+   Cabecera y Navegación (Flexbox)
+   =================================================== */
+
+/* Estilos del encabezado principal */
+header {
+    background-color: #b5121b;
+    /* Color rojo institucional solicitado */
+    width: 100%;
+    /* Ocupa el 100% del ancho horizontal */
+}
+
+/* Contenedor interno centrado de la cabecera */
+.header-contenedor {
+    max-width: 1200px;
+    /* Limita el ancho máximo para pantallas grandes */
+    margin: 0 auto;
+    /* Centra la caja horizontalmente en el espacio disponible */
+    padding: 12px 24px;
+    /* Espaciado interno superior/inferior y lateral */
+    display: flex;
+    /* Activa el modelo Flexbox en el contenedor */
+    justify-content: space-between;
+    /* Separa el logo a la izquierda y el menú a la derecha */
+    align-items: center;
+    /* Centra verticalmente los elementos secundarios */
+}
+
+/* Contenedor flexible del logo */
+.logo {
+    display: flex;
+    /* Permite que la imagen y el texto se alineen lado a lado */
+    align-items: center;
+    /* Alineación vertical perfecta entre logo y texto */
+}
+
+/* Imagen del logotipo */
+.logo img {
+    height: 30px;
+    /* Fija una altura fija y proporcional para el ícono */
+    margin-right: 10px;
+    /* Espacio de separación entre el ícono y el texto VIÑETA */
+}
+
+/* Nombre de la tienda junto al logotipo */
+.logo span {
+    color: #ffffff;
+    /* Texto en color blanco para alto contraste */
+    font-size: 18px;
+    /* Tamaño de fuente legible */
+    font-weight: 700;
+    /* Peso negrita para jerarquía visual */
+    letter-spacing: 0.05em;
+    /* Ligera separación entre letras */
+}
+
+/* Lista de navegación convertida en menú horizontal */
+nav ul {
+    list-style: none;
+    /* Quita las viñetas predeterminadas de la lista */
+    margin: 0;
+    /* Quita el margen exterior de la lista */
+    padding: 0;
+    /* Quita el padding interior de la lista */
+    display: flex;
+    /* Convierte los elementos <li> en fila flexible */
+    gap: 20px;
+    /* Espaciado uniforme entre cada opción del menú */
+}
+
+/* Enlaces del menú de navegación */
+nav a {
+    color: #ffffff;
+    /* Color de texto blanco */
+    text-decoration: none;
+    /* Elimina la línea de subrayado de los links */
+    font-size: 14px;
+    /* Tamaño de fuente del menú */
+}
+
+/* Estado hover al pasar el puntero por el enlace */
+nav a:hover {
+    color: #ffd60a;
+    /* Cambia el texto al color amarillo de acento */
+}
+
+/* ===================================================
+   Banner Principal (Posicionamiento y responsive)
+   =================================================== */
+
+/* Contenedor del banner */
+.banner {
+    position: relative;
+    /* Referencia de posición para el bloque de texto absoluto */
+    width: 100%;
+    /* Ancho completo de la pantalla */
+}
+
+/* Imagen principal del banner */
+.banner img {
+    width: 100%;
+    /* Hace que la imagen ocupe todo el ancho */
+    height: auto;
+    /* Mantiene la proporción original sin deformar */
+    display: block;
+    /* Quita el espacio residual en línea inferior de la imagen */
+}
+
+/* Capa de textos superpuesta sobre la imagen del banner */
+.banner-texto {
+    position: absolute;
+    /* Saca el bloque del flujo y lo ubica sobre el padre */
+    top: 0;
+    /* Lo fija a la parte superior del banner */
+    left: 0;
+    /* Lo fija a la parte izquierda del banner */
+    width: 100%;
+    /* Se extiende a lo largo del banner */
+    padding: 60px 40px;
+    /* Margen interno para no pegarse a los bordes de la imagen */
+}
+
+/* Texto destacado superior */
+.banner-edicion {
+    color: #ffd60a;
+    /* Color amarillo solicitado para EDICIÓN DE COLECCIÓN */
+    font-size: 12px;
+    /* Tamaño pequeño de subtítulo */
+    font-weight: 700;
+    /* Estilo en negrita */
+    letter-spacing: 0.05em;
+    /* Separación de caracteres */
+    text-transform: uppercase;
+    /* Transforma a mayúsculas */
+}
+
+/* Título principal del banner */
+.banner h1 {
+    color: #ffffff;
+    /* Color de texto blanco */
+    font-size: 38px;
+    /* Tamaño grande para jerarquía de impacto */
+    font-weight: 700;
+    /* Negrita pronunciada */
+    margin: 8px 0;
+    /* Margen vertical para separar del badge y subtítulo */
+}
+
+/* Subtítulo del banner */
+.banner h2 {
+    color: #ffffff;
+    /* Color blanco */
+    font-size: 18px;
+    /* Tamaño medio */
+    font-weight: 400;
+    /* Grosor regular */
+    margin: 0 0 16px 0;
+    /* Margen inferior antes del párrafo */
+}
+
+/* Descripción del tomo y preventa */
+.banner p {
+    color: #ffffff;
+    /* Color de texto blanco */
+    font-size: 13px;
+    /* Tamaño compacto legible */
+    line-height: 1.5;
+    /* Altura de línea para facilitar la lectura */
+    max-width: 420px;
+    /* Ancho máximo para evitar líneas excesivamente largas */
+    margin: 0 0 24px 0;
+    /* Margen inferior para separarlo del botón */
+}
+
+/* Botón de acción 'Comprar ahora' */
+.banner-boton {
+    display: inline-block;
+    /* Permite recibir padding vertical y horizontal como caja */
+    background-color: #ffd60a;
+    /* Fondo amarillo solicitado */
+    color: #000000;
+    /* Letras en negro para óptimo contraste */
+    text-decoration: none;
+    /* Quita el subrayado del link */
+    font-size: 13px;
+    /* Tamaño de fuente del botón */
+    font-weight: 700;
+    /* Texto en negrita */
+    padding: 10px 24px;
+    /* Espacio interior del botón */
+    border-radius: 20px;
+    /* Bordes redondeados con la propiedad border-radius */
+}
+
+/* ===================================================
+   Sección Los más vendidos (Flexbox y Cards)
+   =================================================== */
+
+/* Contenedor general de la sección de productos */
+.mas-vendidos {
+    max-width: 1200px;
+    /* Mantiene el ancho estándar centrado */
+    margin: 0 auto;
+    /* Centra la sección en la pantalla */
+    padding: 40px 20px 60px 20px;
+    /* Relleno interno superior, laterales e inferior */
+    text-align: center;
+    /* Centra el título de la sección */
+}
+
+/* Título de la sección */
+.mas-vendidos h2 {
+    color: #b5121b;
+    /* Color rojo solicitado para títulos de sección */
+    font-size: 22px;
+    /* Tamaño de fuente destacado */
+    font-weight: 700;
+    /* Texto en negrita */
+    margin-bottom: 30px;
+    /* Separación inferior respecto a la fila de tarjetas */
+}
+
+/* Fila de tarjetas estructurada con Flexbox */
+.cards-contenedor {
+    display: flex;
+    /* Activa flexbox colocando las tarjetas en una fila horizontal */
+    justify-content: center;
+    /* Centra las cuatro tarjetas en el eje principal */
+    gap: 24px;
+    /* Misma separación horizontal uniforme entre cada tarjeta */
+}
+
+/* Estilo individual de cada card */
+.card {
+    background-color: #ffffff;
+    /* Fondo blanco de la tarjeta */
+    border-radius: 12px;
+    /* Bordes redondeados solicitados */
+    padding: 14px;
+    /* Espaciado interno entre el contenido y los bordes */
+    width: 220px;
+    /* Ancho uniforme para cada una de las 4 cards */
+    text-align: left;
+    /* Alinea el texto informativo a la izquierda */
+}
+
+/* Portada del cómic dentro de la card */
+.card img {
+    width: 100%;
+    /* Hace que la portada llene el ancho interior de la card */
+    height: auto;
+    /* Conserva la proporción original del archivo */
+    display: block;
+    /* Evita espacios en blanco residuales debajo de la imagen */
+    border-radius: 8px;
+    /* Esquinas redondeadas para la imagen de portada */
+    margin-bottom: 12px;
+    /* Margen que separa la imagen del nombre del cómic */
+}
+
+/* Nombre del cómic */
+.card h3 {
+    font-size: 15px;
+    /* Tamaño de fuente para el nombre */
+    font-weight: 700;
+    /* Negrita para resaltar */
+    color: #000000;
+    /* Texto de título en negro */
+    margin: 0 0 4px 0;
+    /* Margen inferior mínimo hacia el género */
+}
+
+/* Género del cómic */
+.card .genero {
+    font-size: 13px;
+    /* Tamaño menor y discreto */
+    color: #777777;
+    /* Tono gris secundario */
+    margin: 0 0 8px 0;
+    /* Margen que separa hacia el precio */
+}
+
+/* Precio del cómic */
+.card .precio {
+    font-size: 14px;
+    /* Tamaño de fuente del valor */
+    font-weight: 700;
+    /* Negrita destacada */
+    color: #b5121b;
+    /* Color rojo solicitado para los precios */
+    margin: 0;
+    /* Elimina márgenes extra */
+}

@@ -1,0 +1,141 @@
+<!-- Declaración del tipo de documento: indica al navegador usar el estándar HTML5 -->
+<!DOCTYPE html>
+<!-- Elemento raíz de la página especificando el idioma español -->
+<html lang="es">
+
+<head>
+    <!-- Codificación de caracteres para interpretar tildes, caracteres especiales y la ñ -->
+    <meta charset="utf-8">
+    <!-- Configuración de la escala para adaptación responsive en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que se muestra en la pestaña del navegador -->
+    <title>Viñeta - Cómics</title>
+    <!-- Enlace a la hoja de estilos CSS externa -->
+    <link rel="stylesheet" href="estilos2.css">
+</head>
+
+<body>
+
+    <!-- Etiqueta semántica para la cabecera del sitio -->
+    <header>
+        <!-- Contenedor interno para limitar el ancho y centrar el contenido de la cabecera -->
+        <div class="header-contenedor">
+
+            <!-- Bloque para agrupar el icono y el nombre de la marca -->
+            <div class="logo">
+                <!-- Imagen del logotipo con su texto alternativo obligatorio -->
+                <img src="logo.png" alt="Logotipo Viñeta">
+                <!-- Texto del nombre de la marca en línea -->
+                <span>VIÑETA</span>
+            </div>
+
+            <!-- Etiqueta semántica que define la sección de navegación -->
+            <nav>
+                <!-- Lista desordenada para estructurar los enlaces del menú -->
+                <ul>
+                    <!-- Elemento de lista que contiene el enlace a la sección Cómics -->
+                    <li><a href="#">Cómics</a></li>
+                    <!-- Elemento de lista que contiene el enlace a la sección Manga -->
+                    <li><a href="#">Manga</a></li>
+                    <!-- Elemento de lista que contiene el enlace a Novelas gráficas -->
+                    <li><a href="#">Novelas gráficas</a></li>
+                    <!-- Elemento de lista que contiene el enlace a Preventas -->
+                    <li><a href="#">Preventas</a></li>
+                    <!-- Elemento de lista que contiene el enlace a Tiendas -->
+                    <li><a href="#">Tiendas</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Etiqueta semántica que encierra el contenido principal del documento -->
+    <main>
+
+        <!-- Sección temática correspondiente al banner promocional -->
+        <section class="banner">
+            <!-- Imagen de fondo del banner principal -->
+            <img src="banner.png" alt="Edición de colección Centinela">
+
+            <!-- Contenedor con posicionamiento absoluto para los textos superpuestos -->
+            <div class="banner-texto">
+                <!-- Texto destacado pequeño de la colección -->
+                <span class="banner-edicion">EDICIÓN DE COLECCIÓN</span>
+                <!-- Encabezado principal (h1) de mayor jerarquía para el título del cómic -->
+                <h1>CENTINELA</h1>
+                <!-- Subtítulo complementario del lanzamiento -->
+                <h2>La guardiana regresa</h2>
+                <!-- Párrafo descriptivo del producto en preventa -->
+                <p>
+                    La saga completa en seis tomos de tapa dura, con portadas alternativas y páginas inéditas. Preventa
+                    disponible hasta el 30 de septiembre.
+                </p>
+                <!-- Enlace estilizado con forma de botón para realizar la compra -->
+                <a href="index.html" class="banner-boton">Comprar ahora</a>
+            </div>
+        </section>
+
+        <!-- Sección temática para los productos más vendidos -->
+        <section class="mas-vendidos">
+            <!-- Título de nivel 2 para la sección de productos -->
+            <h2>Los más vendidos</h2>
+
+            <!-- Contenedor flexible que alinea las tarjetas horizontalmente -->
+            <div class="cards-contenedor">
+
+                <!-- Artículo independiente que representa la card del cómic 1 -->
+                <article class="card">
+                    <!-- Portada del cómic -->
+                    <img src="centinela.png" alt="Portada Centinela #1">
+                    <!-- Título del producto con encabezado nivel 3 -->
+                    <h3>Centinela #1</h3>
+                    <!-- Párrafo para la categoría o género -->
+                    <p class="genero">Superhéroes</p>
+                    <!-- Párrafo que indica el precio de venta -->
+                    <p class="precio">S/ 35.00</p>
+                </article>
+
+                <!-- Artículo independiente que representa la card del cómic 2 -->
+                <article class="card">
+                    <!-- Portada del cómic -->
+                    <img src="ronin-de-neon.png" alt="Portada Ronin de Neón #7">
+                    <!-- Título del producto -->
+                    <h3>Ronin de Neón #7</h3>
+                    <!-- Género literario -->
+                    <p class="genero">Ciencia ficción</p>
+                    <!-- Precio del producto -->
+                    <p class="precio">S/ 42.00</p>
+                </article>
+
+                <!-- Artículo independiente que representa la card del cómic 3 -->
+                <article class="card">
+                    <!-- Portada del cómic -->
+                    <img src="detective-buho.png" alt="Portada Detective Búho #3">
+                    <!-- Título del producto -->
+                    <h3>Detective Búho #3</h3>
+                    <!-- Género del cómic -->
+                    <p class="genero">Misterio</p>
+                    <!-- Precio del cómic -->
+                    <p class="precio">S/ 29.00</p>
+                </article>
+
+                <!-- Artículo independiente que representa la card del cómic 4 -->
+                <article class="card">
+                    <!-- Portada del cómic -->
+                    <img src="astro-gato.png" alt="Portada Astro Gato #12">
+                    <!-- Título del cómic -->
+                    <h3>Astro Gato #12</h3>
+                    <!-- Género infantil -->
+                    <p class="genero">Infantil</p>
+                    <!-- Precio del cómic -->
+                    <p class="precio">S/ 25.00</p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
