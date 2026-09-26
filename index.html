@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos de configuración básica: codificación UTF-8 para tildes y caracteres especiales -->
+    <meta charset="utf-8">
+    <!-- Viewport para que la página sea responsiva y se adapte al ancho de cualquier dispositivo -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Viñeta Cómics · Cotizador de pedido</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Viñeta Cómics</h1>
+    </header>
+
+    <!-- Contenedor principal del contenido semántico -->
+    <main>
+        <!-- Sección del cotizador con clase para estilos en CSS -->
+        <section class="cotizador">
+            <h2>Cotizador de pedido</h2>
+
+            <!-- Campo para el precio unitario del producto -->
+            <label for="precio">Precio del cómic (S/)</label>
+            <input type="number" id="precio" min="0" step="0.01" placeholder="35.00">
+
+            <!-- Campo para la cantidad deseada (mínimo 1) -->
+            <label for="cantidad">Cantidad de ejemplares</label>
+            <input type="number" id="cantidad" min="1" step="1" placeholder="1">
+
+            <!-- Lista desplegable para seleccionar el tipo de entrega y su tarifa asociada -->
+            <label for="envio">Tipo de entrega</label>
+            <select id="envio">
+                <option value="0">Recojo en tienda (S/ 0.00)</option>
+                <option value="10">Envío a Lima (S/ 10.00)</option>
+                <option value="18">Envío a provincias (S/ 18.00)</option>
+            </select>
+
+            <!-- Botón que desencadena el cálculo al hacer clic -->
+            <button type="button" id="btnCotizar">Cotizar pedido</button>
+
+            <!-- Contenedor donde se inserta dinámicamente el mensaje o desglose de costos -->
+            <div id="resultado" class="resultado">
+                Complete los datos y presione «Cotizar pedido».
+            </div>
+        </section>
+    </main>
+
+    <!-- El script se coloca al final del body para asegurar que el DOM esté completamente cargado antes de ejecutarse -->
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+/* Reseteo básico de márgenes y rellenos por defecto del navegador */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografía general, color de texto y color de fondo beige cálido */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f3e9;
+    color: #1d1b1b;
+}
+
+/* Barra superior roja distintiva con espaciado interior */
+header {
+    background-color: #b5121b;
+    padding: 16px 40px;
+}
+
+/* Título en la barra superior en color blanco */
+header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+/* Tarjeta principal del cotizador: centrada con auto, con ancho fijo y organizada en columna mediante flexbox */
+.cotizador {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    margin: 40px auto;
+    padding: 28px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    /* Bordes redondeados de la tarjeta */
+}
+
+/* Título de la tarjeta en color rojo corporativo */
+.cotizador h2 {
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    color: #b5121b;
+}
+
+/* Etiquetas de los campos: en bloque implícito gracias al flex column y en negrita */
+label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Campos de entrada y lista desplegable: relleno, bordes suaves y separación inferior */
+input,
+select {
+    margin-bottom: 18px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #d6cfc0;
+    border-radius: 8px;
+}
+
+/* Estado de foco al interactuar con inputs o select: resalta el contorno */
+input:focus,
+select:focus {
+    border-color: #b5121b;
+    outline: 2px solid #ffd60a;
+}
+
+/* Botón principal amarillo tipo píldora (border-radius alto) con cursor de puntero */
+button {
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #1d1b1b;
+    background-color: #ffd60a;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+/* Contenedor del resultado con fondo suave, espaciado y altura de línea adecuada para leer el desglose */
+.resultado {
+    margin-top: 22px;
+    padding: 16px;
+    font-size: 15px;
+    line-height: 1.7;
+    background-color: #f7f3e9;
+    border-radius: 8px;
+}
